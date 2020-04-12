@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Books</h1>
+        
+        <table class="table table-striped">
+            <tr><th>Name</th><th>Author</th><th>Genre</th></tr>
+                <tr th:each="book : ${books}">
+                <td th:text="${book.name }"></td>
+                <td th:text="${book.author }"></td>
+                <td th:text="${book.genre }"></td>
+                </tr>
+        </table>
+        
+    </body>
+</html>
